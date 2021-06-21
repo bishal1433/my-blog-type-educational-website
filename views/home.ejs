@@ -1,0 +1,27 @@
+
+<%- include("partials/header"); -%>
+    <h1>Home</h1>
+    <h4 style="color:yellow"> <%= startingContent %> </h4>
+    <h4 style="color:yellow">
+      In the age of internet and MOOCs, do we really need to spend huge amount on getting degrees? One can equally quench his third for knowledge by joining online classes. Online classes are not only cheap but also conveniently arranged for those who are working. What else a student would want if he gets free classes that too online and for that Youtube is best online platform.But the problem is youtube is so vast that nowadays people cannot find the perfect channel.So we decide to provide structured courses from youtube on informative videos and structured course related videos. We believe that there should be free flow of knowledge and it is beneficial for the students and teachers both.
+    </h4>
+    <h3 style="color:yellow">~The Great Learner Team</h3>
+
+
+  <%  posts.forEach(function(post){ %>
+
+    <h1><%=post.title%></h1>
+    <p>
+    <%=post.content.substring(0, 100) + " ..."%>
+    <a href="/posts/<%=post._id%>" style="color:white;"><strong>Read More</strong></a>
+    </p>
+
+
+    <% }) %>
+    <form class="" action="/login" method="post">
+        <button class="btn btn-primary btn-lg" type="submit" name="logIn">LogIn</button>
+    </form>
+
+
+
+<%- include("partials/footer"); -%>

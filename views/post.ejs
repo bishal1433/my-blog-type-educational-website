@@ -1,0 +1,15 @@
+<%- include("partials/header"); -%>
+
+  <h1><%=title%></h1>
+  <p><span style="color:yellow">Here is your link:</span><br>
+    <a href="<%=content%>" style="color:#00EAD3"> <strong>Learn Now</strong> </a>
+  </p>
+  <strong><p style="color:red;">Hello Admin,Please Enter Your Secret Password for Delete The Post.</p></strong>
+  <form action="/delete" method="post">
+
+    <input type="password" name="passkey" placeholder="Password">
+    <br><br>
+      <button class="btn btn-md btn-primary" type="submit" name="deleteId" value="<%=id%>">Delete Post</button>
+  </form>
+
+<%- include("partials/footer"); -%>
